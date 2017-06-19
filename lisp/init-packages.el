@@ -54,6 +54,7 @@
 ;; 自动括号补全插件
 (require 'smartparens-config)
 (smartparens-global-mode 1)
+(show-smartparens-global-mode 1)
 
 (require 'popwin)
 (popwin-mode 1)

@@ -9,9 +9,6 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 10)
 
-;; 高亮括号匹配
-(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-
 ;;  自动加载外部修改过的文件
 (global-auto-revert-mode 1)
 
@@ -40,15 +37,6 @@
       (progn
 	(indent-buffer)
 	(message "Indent buffer.")))))
-
-
-;; 光标在中间的时候也高亮括号
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
-  "Highlight enclosing parens."
-  (cond ((looking-at-p "\\s(") (funcall fn))
-	(t (save-excursion
-	     (ignore-errors (backward-up-list))
-	     (funcall fn)))))
 
 
 (defun hidden-dos-eol ()
