@@ -1,10 +1,23 @@
-;; 这个文件需要在其他文件之后被require
 
-;; 将函数my/open-init-file绑定到 <f2> 键上
-(global-set-key (kbd "<f2>") 'my/open-init-file)
-
+;; ----------------------------------------------------
+;; Bind build-in functions
+;; ----------------------------------------------------
 (global-set-key (kbd "C-x C-r") 'recentf-open-files)
+(global-set-key (kbd "s-/") 'hippie-expand)
 
+
+;; ----------------------------------------------------
+;; Bind custom functions
+;; ----------------------------------------------------
+(global-set-key (kbd "<f2>") 'my/open-init-file)
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+
+;; ----------------------------------------------------
+;; Bind third party packages
+;; ----------------------------------------------------
 ;; ivy & swiper & counsel keybindings
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
@@ -19,17 +32,11 @@
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-c k") 'counsel-ag)
 (global-set-key (kbd "C-x l") 'counsel-locate)
-
-(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
-
-(global-set-key (kbd "s-/") 'hippie-expand)
-
-(global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
-
-(global-set-key (kbd "M-s o") 'occur-dwim)
-
 (global-set-key (kbd "M-s i") 'counsel-imenu)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+;; js2-refactor
+(js2r-add-keybindings-with-prefix "C-c C-m")
 
 (provide 'init-keybindings)
