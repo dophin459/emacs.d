@@ -14,7 +14,7 @@
 ;; ----------------------------------------------------
 ;; Bind custom functions
 ;; ----------------------------------------------------
-(global-set-key (kbd "<f2>") 'my/open-init-file)
+(global-set-key (kbd "<f2>") 'open-my-init-file)
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
 (global-set-key (kbd "C-c t i") 'my-toggle-web-indent)
 (global-set-key (kbd "M-s o") 'occur-dwim)

@@ -16,12 +16,13 @@
 		      counsel
 		      smartparens
 		      popwin
+		      rainbow-delimiters
 		      
 		      hungry-delete
 		      reveal-in-osx-finder
 		      expand-region
 		      iedit
-
+		    
 		      js2-mode
 		      web-mode
 		      js2-refactor
@@ -45,13 +46,13 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
-;; 加载主题
+
 (load-theme 'spacemacs-dark t)
 
-;; 启用自动补全插件
-(global-company-mode 1)
+(add-hook 'prog-mode-hook 'company-mode)
 
-;; 自动括号补全插件
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 (require 'smartparens-config)
 (smartparens-global-mode 1)
 (show-smartparens-global-mode 1)
