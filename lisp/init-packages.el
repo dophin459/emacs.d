@@ -17,7 +17,7 @@
 		      smartparens
 		      popwin
 		      rainbow-delimiters
-		      
+		 		      
 		      hungry-delete
 		      reveal-in-osx-finder
 		      expand-region
