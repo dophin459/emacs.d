@@ -22,6 +22,7 @@
 		      reveal-in-osx-finder
 		      expand-region
 		      iedit
+		      flycheck
 		      
 		      js2-mode
 		      web-mode
