@@ -20,6 +20,11 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; open file in view-mode default
+(setq view-read-only t)
+(add-hook 'find-file-hook
+	  (lambda ()
+	    (view-mode 1)))
 
 ;; 代码缩进
 (defun indent-buffer ()
