@@ -23,7 +23,8 @@
 		      expand-region
 		      iedit
 		      flycheck
-		      
+
+		      go-mode
 		      js2-mode
 		      web-mode
 		      js2-refactor
