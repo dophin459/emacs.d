@@ -1,6 +1,6 @@
 
 ;; 默认启动全屏
-(setq initial-frame-alist '((fullscreen . maximized)))
+;; (setq initial-frame-alist '((fullscreen . maximized)))
 
 ;; 关闭工具栏
 (tool-bar-mode -1)
