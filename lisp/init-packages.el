@@ -40,7 +40,7 @@
 			))
 
 (when (string-equal system-type "darwin")
-  (append my/packages my/osx-packages))
+  (setq my/packages (append my/packages my/osx-packages)))
 
 (setq package-selected-packages my/packages)
 
