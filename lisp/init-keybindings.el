@@ -2,7 +2,7 @@
 ;; ----------------------------------------------------
 ;; Bind build-in functions
 ;; ----------------------------------------------------
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+(global-set-key (kbd "<f7>") 'recentf-open-files)
 (global-set-key (kbd "s-/") 'hippie-expand)
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "M-n") nil)
