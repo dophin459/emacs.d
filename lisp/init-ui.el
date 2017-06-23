@@ -11,8 +11,9 @@
 ;; 关闭启动帮助画面
 (setq inhibit-splash-screen t)
 
-;; 更改字体 14pt
-(set-face-attribute 'default nil :height 140 :family "Source Code Pro")
+;; set a default font
+(when (member "Source Code Pro" (font-family-list))
+  (set-face-attribute 'default nil :font "Source Code Pro-14"))
 
 ;; 显示行号
 (global-linum-mode 1)
