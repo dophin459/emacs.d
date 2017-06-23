@@ -8,31 +8,39 @@
 ;; cl - Common Lisp Extension
 (require 'cl)
 
-;; to install new package, add package name to my/packages
-(defvar my/packages '(
-		      company
+(defvar my/packages nil "Default packages")
+(defvar my/osx-packages nil "OSX specific packages")
 
-		      swiper
-		      counsel
-		      smartparens
-		      popwin
-		      rainbow-delimiters
-		 		      
-		      hungry-delete
-		      reveal-in-osx-finder
-		      expand-region
-		      iedit
-		      flycheck
+;; add default packages here
+(setq my/packages '(
+		    company
+		    swiper
+		    counsel
+		    smartparens
+		    popwin
+		    rainbow-delimiters
+		    hungry-delete
+		    expand-region
+		    iedit
+		    flycheck
+		    js2-refactor
+		    
+		    go-mode
+		    js2-mode
+		    web-mode
 
-		      go-mode
-		      js2-mode
-		      web-mode
-		      js2-refactor
+		    exec-path-from-shell
 
-		      exec-path-from-shell
+		    spacemacs-theme
+		    ))
 
-		      spacemacs-theme
-		      ) "Default packages")
+;; add osx specific packages here
+(setq my/osx-packages '(
+			reveal-in-osx-finder
+			))
+
+(when (string-equal system-type "darwin")
+  (append my/packages osx-packages))
 
 (setq package-selected-packages my/packages)
 
